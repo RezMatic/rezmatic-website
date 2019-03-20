@@ -1,0 +1,15 @@
+.block_one .prettyprint ol {
+  max-width: 100%;
+}
+pre.prettyprint {
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero .button-container_center {
+  margin-bottom: 0;
+}
+.hero p {
+  text-align: center;
+}
