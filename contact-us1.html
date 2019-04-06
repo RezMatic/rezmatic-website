@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--[if lte IE 6 ]><html lang="en" class="no-js legacy env-windows env-os-na env- env-b-1000000 env-computer env-IN">"><![endif]-->
 <!--[if IE 7 ]><html lang="en" class="no-js legacy env-windows env-os-na env- env-b-1000000 env-computer env-IN"><![endif]-->
@@ -18,7 +19,7 @@
             })(window,document,'script','dataLayer','GTM-NTH39XD');</script>
          End Google Tag Manager -->
 
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 		<title>Get in touch with our friendly marketing experts | Rezmatic India</title>
 		<meta name="description" content="Contact Rezmatic India for help, support or advice from technical questions to business queries on how communication marketing can boost your business.">
 		<meta name="keywords" content="Rezmatic india contact, Rezmatic india address, Rezmatic india phone number, contact Rezmatic, Rezmatic customer service">
@@ -40,12 +41,12 @@
 		<link rel="stylesheet" type="text/css" media="all" href="css/layout3860.css?v=1" />
 		<script type="text/javascript" src="js/jquery/1.8.1/jquery.min.js"></script>
 		<!-- BootstrapValidator CSS -->
-  		<link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
+  		<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
   		<!-- jQuery and Bootstrap JS -->
- 		 <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
- 		 <script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+ 		 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
+ 		 <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap/3.2.0/js/bootstrap.min.js"></script>
  		 <!-- BootstrapValidator JS -->
-	  <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
+	  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
 
 
 		
@@ -339,121 +340,9 @@
     	
 </div><!-- .block_two-even-mini -->
 
-<script>
 
-$(document).ready(function() {
-    $('#test-form').bootstrapValidator({
-        //submitButtons: '#postForm',
-        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-        feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },        
-        fields: {
-            firstName: {
-             message: 'The first name is not valid',
-                validators: {
-                    notEmpty: {
-                        message: 'The first name is required and cannot be empty'
-                    },
-                    stringLength: {
-                        min: 1,
-                        max: 30,
-                        message: 'The first name must be more than 1 and less than 30 characters long'
-                    },
-                    regexp: {
-                        regexp: /^[A-z]+$/,
-                        message: 'The first name can only accept alphabetical input'
-                    },
-                }
-            },
-            lastName: {
-                message: 'Last Name is not valid',
-                validators: {
-                    notEmpty: {
-                        message: 'Last Name is required and cannot be empty'
-                    },
-                    stringLength: {
-                        min: 1,
-                        max: 30,
-                        message: 'Last Name must be more than 1 and less than 30 characters long'
-                    },
-                    regexp: {
-                        regexp: /^[A-z]+$/,
-                        message: 'Last Names can only consist of alphabetical characters'
-                    },
-                }
-            },
-            email: {
-                validators: {
-                    notEmpty: {
-                        message: 'The email address is required and cannot be empty'
-                    },
-                    emailAddress: {
-                        message: 'The email address is not a valid'
-                    }
-                }
-            },
-		
-	mobile: {
-             message: 'The mobile number is not valid',
-                validators: {
-                    notEmpty: {
-                        message: 'The mobile number is required and cannot be empty'
-                    },
-                    stringLength: {
-                        min: 10,
-                        max: 10,
-                        message: 'The mobile number must be of 10 digit'
-                    },
-                    
-                }
-            },
-            address: {
-                message: 'Address is not valid',
-                validators: {
-                    notEmpty: {
-                        message: 'Address is required and cannot be empty'
-                    }
-                }
-            }, 
 
-        }
-    })
-    .on('success.form.bv', function(e) {
-        // Prevent form submission
-        e.preventDefault();
 
-        // Get the form instance
-        var $form = $(e.target);
-
-        // Get the BootstrapValidator instance
-        var bv = $form.data('bootstrapValidator');
-
-        // Use Ajax to submit form data
-        var url = 'https://script.google.com/macros/s/AKfycbzARoQi35B708GVyEmwtLEqt4PHLqj8E4hQUcnDkotjvPP860c/exec';
-        var redirectUrl = 'contact-us-thank-you.html';
-        // show the loading 
-        $('#postForm').prepend($('<span></span>').addClass('glyphicon glyphicon-refresh glyphicon-refresh-animate'));
-        var jqxhr = $.post(url, $form.serialize(), function(data) {
-            console.log("Success! Data: " + data.statusText);
-            $(location).attr('href',redirectUrl);
-        })
-            .fail(function(data) {
-                console.warn("Error! Data: " + data.statusText);
-                // HACK - check if browser is Safari - and redirect even if fail b/c we know the form submits.
-                if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
-                    //alert("Browser is Safari -- we get an error, but the form still submits -- continue.");
-                    $(location).attr('href',redirectUrl);                
-                }
-            });
-    });
-});
-
-</script>
-
-<script type="text/javascript"></script>
 
 
 <!-- .blocks_one -->
@@ -474,39 +363,47 @@ $(document).ready(function() {
 					<div class="footer-blocks">
 
 						<div class="one">
-							<h3>Resellers</h3>
+							<h3>Build</h3>
 							<div class="footer-icon-block">
 								<div class="icon icon_resellers">
 									<span class="c1"></span>
 								</div>
 								<div class="footer-developers">
 									<p>Select the right package and offer the best business mobile messaging platform to your customers.</p>
-									<p class="button-row"><a href="resellers.html" class="button button_blue">Reseller Packages</a></p>
+									
 								</div>
 							</div>
 						</div><!-- .one -->
 
 						<div class="two">
-							<h3>Developers</h3>
+							<h3>Collaborate</h3>
 							<div class="footer-icon-block">
 								<div class="icon icon_api">
 									<span class="c1"></span>
 								</div>
 								<div class="footer-developers">
-									<p>Integrate text messaging into your own application, website or CRM with the Textlocal API.</p>
-									<p class="button-row"><a href="simple-developer-sms-api.html" class="button button_blue">Learn about our API</a></p>
+									<p>Integrate text messaging into your own application, website or CRM with the RezMatic API.</p>
+									
 								</div>
 							</div>
 						</div><!-- .two -->
 
-						<div class="three" id="footer-svg">
-							<h3>Mobile SMS App</h3>
-							<div class="footer-app">
-								<div class="footer-app-img"><a href="messenger-mobile-marketing-app.html"><img src="img/footer-app.png" alt="Mobile phone app" title="Mobile phone app" /></a></div>
+						<div class="three">
+							<h3>Create</h3>
+							<div class="footer-icon-block">
+								<div class="icon icon_bulk-sms"> 
+									<span class="c1"></span> 
+								</div>
+								<div class="footer-developers">
 								<p>Download our iPhone And Android apps to send messages on the go.</p>
-								<p class="button-row"><a href="messenger-mobile-marketing-app.html" class="button button_blue">Download App</a></p>
+
+								<br> <br> <br> <br> <br> <br>
+								
 							</div>
+						</div>
 						</div><!-- .three -->
+
+
 
 						<script type="text/javascript"> svg_or_png('#footer-svg'); </script>
 
@@ -517,33 +414,53 @@ $(document).ready(function() {
 				<div class="rwd">
 					<div class="footer-menus">
 
+						<div class="block_one">
+		<h3 style="text-align: center">We can't wait to see how you are engaging &hellip;</h3>
+	</div><!-- .block_one -->
+	<br>
+	<br>
+
 						<div class="one">
 							<ul class="footer-menu">
-								<li><a href="sitemap.html">Sitemap</a></li>
-								<li><a href="terms.html">Terms</a></li>
-								<li><a href="privacy.html">Privacy</a></li>
-								<li><a href="acceptable-use-policy.html">Acceptable Use Policy</a></li>
-								<li><a href="cookie-policy.html">Cookie Policy</a></li>
+								<p>Company</p> <br>
+								<li><a href="about-us.html">About Us</a></li>
+								<li><a href="career.html">Career</a></li>
+								<li><a href="contact-us.html">Contact Us</a></li>
+								<li><a href="https://calendly.com/rezmatic-appointment">Schededule Your Call</a></li>
+								
 							</ul>
 						</div><!-- .one -->
 
+
+
 						<div class="two">
 							<ul class="footer-contact-details">
-								<li><span>Call:</span> <a href="tel:+914030858602" rel="nofollow" class="contact-link" id="google-phone-number2">+91 40 30858602 <em><b>|</b> Mon to Sat (9am - 6pm)</em></a></li>
-								<li><span>Email:</span> <a href="mailto:support@textlocal.in" class="contact-link">support@textlocal.in</a></li>
+								<li><span>Call:</span> <a href="tel:+914030858602" rel="nofollow" class="contact-link" id="google-phone-number2">+91 845 922 0726 <em></a></li>
+								<li><span>Email:</span> <a href="mailto:smile@rezmatic.com" class="contact-link">smile@rezmatic.com</a></li>
 							</ul>
 						</div><!-- .two -->
 
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+
 						<div class="three">
-							<p class="align_center">&copy; copyright 2019 <a href="http://www.imimobile.com/" class="hide-external-hint">IMImobile</a>. All rights reserved.</p>
+							<p class="align_center">&copy; copyright 2019 <a href="http://www.rezmatic.com/" class="hide-external-hint">RezMatic</a>. All rights reserved.</p>
 						</div><!-- .three -->
 
 					</div><!-- .footer-menus -->
 				</div><!-- .rwd -->
 			</div><!-- .footer-row -->
+                                
             		</div><!-- .footer -->
 
 		<div id="social-tabs"></div>
+
+		<script src="js/validation-functions.js" type="text/javascript"></script>
 
 		
             
